@@ -28,10 +28,10 @@ data class DataHistory(
 @Parcelize
 data class ScanHistory(
     @SerializedName("scan_id")
-    val scan_id: String,
+    val scanId: String,
 
     @SerializedName("soil_type")
-    val soil_Type: String,
+    val soilType: String,
 
     @SerializedName("date_scan")
     val date: String,

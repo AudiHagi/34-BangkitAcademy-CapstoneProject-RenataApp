@@ -71,15 +71,15 @@ interface ApiService {
     // PROFILE API SERVICE SECTION
     @GET("profile")
     fun getProfile(
-        @Header("Authorization") Bearer: String,
+        @Header("Authorization") bearer: String,
     ): Call<ProfileResponse>
 
     @FormUrlEncoded
     @POST("profile")
     fun updateProfile(
-        @Header("Authorization") Bearer: String,
-        @Field("first_name") first_name: String,
-        @Field("last_name") last_name: String,
+        @Header("Authorization") bearer: String,
+        @Field("firstName") firstName: String,
+        @Field("lastName") lastName: String,
         @Field("phone") phone: String,
         @Field("address") address: String
     ): Call<UpdateProfileResponse>
@@ -87,7 +87,7 @@ interface ApiService {
     @Multipart
     @POST("profile-image")
     fun uploadProfilePict(
-        @Header("Authorization") Bearer: String,
+        @Header("Authorization") bearer: String,
         @Part file: MultipartBody.Part
     ): Call<UpdatePhotoResponse>
 

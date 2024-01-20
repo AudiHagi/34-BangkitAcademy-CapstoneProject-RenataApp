@@ -21,7 +21,7 @@ import com.renata.view.activity.splash.SplashScreenActivity
 class AccountFragment : Fragment() {
     private var _binding: FragmentAccountBinding? = null
     private val accountBinding get() = _binding!!
-    var accountViewModel: ProfileViewModel = ProfileViewModel()
+    private var accountViewModel: ProfileViewModel = ProfileViewModel()
     private lateinit var loginPreference: LoginPreferences
     private lateinit var loginResult: LoginResult
     private val PROFILE_ACTIVITY_REQUEST_CODE = 1
@@ -29,7 +29,7 @@ class AccountFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         return accountBinding.root
     }
@@ -42,7 +42,7 @@ class AccountFragment : Fragment() {
         accountViewModel = ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()
-        ).get(ProfileViewModel::class.java)
+        )[ProfileViewModel::class.java]
         val token = loginResult.token
         getData(token)
         goToSetting()
@@ -60,15 +60,15 @@ class AccountFragment : Fragment() {
                 if (response != null && response.success) {
                     val data = response.data
                     accountBinding.tvProfileEmail.text = data.email
-                    val image = data.avatar_link
-                    val name = data.full_name
+                    val image = data.avatarLink
+                    val name = data.fullName
                     if (image == "" || name == "") {
                         accountBinding.tvProfileName.text = ""
                         accountBinding.profileImage.setImageResource(R.drawable.image_placeholder)
                     } else {
-                        accountBinding.tvProfileName.text = data.full_name
+                        accountBinding.tvProfileName.text = data.fullName
                         Glide.with(this@AccountFragment)
-                            .load(data.avatar_link)
+                            .load(data.avatarLink)
                             .into(accountBinding.profileImage)
                     }
                 }
@@ -88,6 +88,7 @@ class AccountFragment : Fragment() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         showLoading(false)
         super.onActivityResult(requestCode, resultCode, data)
@@ -97,7 +98,7 @@ class AccountFragment : Fragment() {
             accountViewModel.userProfile(tokenNow)
             accountViewModel.getUserProfile().observe(viewLifecycleOwner) {
                 val data = it.data
-                val image = data.avatar_link
+                val image = data.avatarLink
                 if (image == "") {
                     accountBinding.profileImage.setImageResource(R.drawable.image_placeholder)
                 } else {

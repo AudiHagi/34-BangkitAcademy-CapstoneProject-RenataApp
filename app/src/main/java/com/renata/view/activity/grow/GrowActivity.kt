@@ -11,16 +11,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.renata.R
-import com.renata.data.user.login.LoginPreferences
-import com.renata.data.user.login.LoginResult
 import com.renata.databinding.ActivityGrowBinding
 import com.renata.view.activity.main.NavigationActivity
 
 class GrowActivity : AppCompatActivity() {
     private lateinit var growBinding: ActivityGrowBinding
     private lateinit var growViewModel: GrowViewModel
-    private lateinit var loginPreference: LoginPreferences
-    private lateinit var loginResult: LoginResult
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -99,6 +95,7 @@ class GrowActivity : AppCompatActivity() {
                 growBinding.errorPlant.visibility = View.VISIBLE
                 growBinding.errorPlant.text = getString(R.string.insert_plant_error)
             }
+
             else -> {
                 if (!TextUtils.isEmpty(plant)) {
                     growStep(plant, soilType)
@@ -137,6 +134,7 @@ class GrowActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         backToMain()

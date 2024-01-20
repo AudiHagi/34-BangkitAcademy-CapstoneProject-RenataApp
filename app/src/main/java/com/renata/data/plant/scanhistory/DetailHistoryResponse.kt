@@ -19,7 +19,7 @@ class DetailHistoryResponse(
 @Parcelize
 data class DataDetailHistory(
     @SerializedName("soil_type")
-    val soil_Type: String,
+    val soilType: String,
 
     @SerializedName("date_scan")
     val date: String,

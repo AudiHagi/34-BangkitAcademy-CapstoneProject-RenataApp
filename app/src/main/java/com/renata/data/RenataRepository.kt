@@ -109,6 +109,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Register exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -141,6 +142,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Authentication exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -168,6 +170,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Resend OTP exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -199,6 +202,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Login exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -230,6 +234,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Forgot password exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -263,6 +268,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Reset authentication exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -300,6 +306,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Reset password exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -357,6 +364,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Plant recommendation exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -410,6 +418,7 @@ class RenataRepository(private val application: Application) {
                         else -> "An HTTP error occurred with code $httpCode"
                     }
                 }
+
                 else -> "Scan history exception: ${e.message}"
             }
             Log.e(TAG, errorMessage)
@@ -465,6 +474,7 @@ class RenataRepository(private val application: Application) {
                             else -> "An HTTP error occurred with code $httpCode"
                         }
                     }
+
                     else -> "Detail history exception: ${e.message}"
                 }
                 Log.e(TAG, errorMessage)

@@ -141,9 +141,12 @@ class ScanActivity : AppCompatActivity() {
                                 is Result.Loading -> {
                                     showLoading(true)
                                 }
+
                                 is Result.Error -> {
                                     showLoading(false)
+                                    alertPlantFail()
                                 }
+
                                 is Result.Success -> {
                                     showLoading(false)
                                     val recommendedPlants =
@@ -152,9 +155,9 @@ class ScanActivity : AppCompatActivity() {
                                     val plantRecommendation =
                                         recommendedPlants.mapIndexed { index, plant ->
                                             if (index == 0) {
-                                                "$bullet ${plant.plant_name}"
+                                                "$bullet ${plant.plantName}"
                                             } else {
-                                                "$bullet ${plant.plant_name}"
+                                                "$bullet ${plant.plantName}"
                                             }
                                         }.joinToString("\n")
                                     val compressedImage = compressBitmap(image)
@@ -182,6 +185,16 @@ class ScanActivity : AppCompatActivity() {
         builder.show()
     }
 
+    private fun alertPlantFail() {
+        val builder = AlertDialog.Builder(this, com.renata.R.style.CustomAlertDialog)
+            .create()
+        val view = layoutInflater.inflate(com.renata.R.layout.custom_alert_dialog_crop_fail, null)
+        val button = view.findViewById<Button>(com.renata.R.id.tryAgain_btn)
+        builder.setView(view)
+        button.setOnClickListener { builder.dismiss() }
+        builder.setCanceledOnTouchOutside(false)
+        builder.show()
+    }
 
     private fun alertFail() {
         val builder = AlertDialog.Builder(this, com.renata.R.style.CustomAlertDialog)

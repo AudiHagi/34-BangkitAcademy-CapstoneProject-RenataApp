@@ -1,14 +1,16 @@
 package com.renata.view.activity.detailhistory
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.renata.databinding.ActivityDetailHistoryBinding
 import com.renata.utils.DateFormatter
 import com.renata.view.activity.grow.GrowActivity
-import java.util.*
+import java.util.TimeZone
 
 class DetailHistoryActivity : AppCompatActivity() {
     private lateinit var detailHistoryBinding: ActivityDetailHistoryBinding
@@ -20,6 +22,7 @@ class DetailHistoryActivity : AppCompatActivity() {
         const val PLANT_RECOMM = "plant"
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         detailHistoryBinding = ActivityDetailHistoryBinding.inflate(layoutInflater)

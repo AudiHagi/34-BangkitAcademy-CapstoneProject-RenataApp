@@ -92,8 +92,8 @@ class ProfileActivity : AppCompatActivity() {
                 )
                 {
                     val resultIntent = Intent()
-                    resultIntent.putExtra("image", data.avatar_link)
-                    resultIntent.putExtra("name", data.full_name)
+                    resultIntent.putExtra("image", data.avatarLink)
+                    resultIntent.putExtra("name", data.fullName)
                     resultIntent.putExtra("email", data.email)
                     setResult(Activity.RESULT_OK, resultIntent)
                     finish()
@@ -115,16 +115,16 @@ class ProfileActivity : AppCompatActivity() {
         profileViewModel.getUserProfile().observe(this) {
             profileBinding.apply {
                 val data = it.data
-                edFirstName.setText(data.first_name)
-                edLastName.setText(data.last_name)
+                edFirstName.setText(data.firstName)
+                edLastName.setText(data.lastName)
                 edPhone.setText(data.phone)
                 edAddress.setText(data.address)
-                val image = data.avatar_link
+                val image = data.avatarLink
                 if (image == "") {
                     profileBinding.profileImage.setImageResource(R.drawable.image_placeholder)
                 } else {
                     Glide.with(this@ProfileActivity)
-                        .load(data.avatar_link)
+                        .load(data.avatarLink)
                         .into(profileImage)
                 }
                 showLoading(false)

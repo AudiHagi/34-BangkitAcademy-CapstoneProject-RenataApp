@@ -112,6 +112,7 @@ class AuthenticationActivity : AppCompatActivity() {
                         is Result.Loading -> {
                             showLoading(true)
                         }
+
                         is Result.Error -> {
                             showLoading(false)
                             val errorMessage = result.data
@@ -120,6 +121,7 @@ class AuthenticationActivity : AppCompatActivity() {
                                 errorMessage
                             ) { otpClear() }
                         }
+
                         is Result.Success -> {
                             showLoading(false)
                             showAlert(
@@ -147,6 +149,7 @@ class AuthenticationActivity : AppCompatActivity() {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                         val errorMessage = result.data
@@ -155,6 +158,7 @@ class AuthenticationActivity : AppCompatActivity() {
                             errorMessage
                         ) { otpClear() }
                     }
+
                     is Result.Success -> {
                         showLoading(false)
                         showAlert(

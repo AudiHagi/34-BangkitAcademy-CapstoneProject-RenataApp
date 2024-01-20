@@ -181,14 +181,17 @@ class LoginActivity : AppCompatActivity() {
                 insertEmail()
                 insertPass()
             }
+
             email.isEmpty() -> {
                 showLoading(false)
                 insertEmail()
             }
+
             password.isEmpty() -> {
                 showLoading(false)
                 insertPass()
             }
+
             else -> {
                 if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
                     if (passwordValidation(password) && emailValidation(email)) {
@@ -219,6 +222,7 @@ class LoginActivity : AppCompatActivity() {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                         val errorMessage = result.data
@@ -227,6 +231,7 @@ class LoginActivity : AppCompatActivity() {
                             errorMessage
                         ) {}
                     }
+
                     is Result.Success -> {
                         showLoading(false)
                         loginSuccess(result.data)

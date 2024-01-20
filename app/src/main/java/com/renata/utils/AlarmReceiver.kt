@@ -1,5 +1,6 @@
 package com.renata.utils
 
+import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -16,9 +17,10 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.renata.R
 import com.renata.view.activity.splash.SplashScreenActivity
-import java.util.*
+import java.util.Calendar
 
 class AlarmReceiver : BroadcastReceiver() {
+    @SuppressLint("UnsafeProtectedBroadcastReceiver")
     override fun onReceive(context: Context, intent: Intent) {
         val title = context.getString(R.string.alarm_message1)
         val message = context.getString(R.string.alarm_message2)

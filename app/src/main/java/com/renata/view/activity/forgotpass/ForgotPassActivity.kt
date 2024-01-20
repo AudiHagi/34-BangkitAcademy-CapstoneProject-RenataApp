@@ -55,6 +55,7 @@ class ForgotPassActivity : AppCompatActivity() {
             email.isEmpty() -> {
                 insertEmail()
             }
+
             else -> {
                 if (!TextUtils.isEmpty(email)) {
                     if (emailValidation(email)) {
@@ -83,6 +84,7 @@ class ForgotPassActivity : AppCompatActivity() {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                         val errorMessage = result.data
@@ -91,6 +93,7 @@ class ForgotPassActivity : AppCompatActivity() {
                             errorMessage
                         ) {}
                     }
+
                     is Result.Success -> {
                         showLoading(false)
                         showAlert(

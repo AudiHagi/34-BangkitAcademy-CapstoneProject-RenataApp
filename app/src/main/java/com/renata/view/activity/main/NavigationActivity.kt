@@ -37,6 +37,7 @@ class NavigationActivity : AppCompatActivity() {
             R.id.navigation_history -> {
                 finishAffinity()
             }
+
             else -> {
                 val historyFragment = navController.graph.findNode(R.id.navigation_history)
                 navController.popBackStack(historyFragment!!.id, false)

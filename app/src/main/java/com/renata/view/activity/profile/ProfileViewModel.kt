@@ -19,14 +19,14 @@ class ProfileViewModel : ViewModel() {
     val isLoading: LiveData<Boolean> = _isLoading
     fun setUserProfile(
         token: String,
-        first_name: String,
-        last_name: String,
+        firstName: String,
+        lastName: String,
         phone: String,
         address: String
     ) {
         _isLoading.postValue(true)
         val client =
-            ApiConfig.getApiService().updateProfile(token, first_name, last_name, phone, address)
+            ApiConfig.getApiService().updateProfile(token, firstName, lastName, phone, address)
         client.enqueue(object : Callback<UpdateProfileResponse> {
             override fun onResponse(
                 call: Call<UpdateProfileResponse>,

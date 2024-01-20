@@ -129,18 +129,22 @@ class RegisterActivity : AppCompatActivity() {
                 insertPass()
                 insertConfirmPAss()
             }
+
             confirmPass.isEmpty() -> {
                 showLoading(false)
                 insertConfirmPAss()
             }
+
             email.isEmpty() -> {
                 showLoading(false)
                 insertEmail()
             }
+
             password.isEmpty() -> {
                 showLoading(false)
                 insertPass()
             }
+
             else -> {
                 if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(
                         confirmPass
@@ -183,6 +187,7 @@ class RegisterActivity : AppCompatActivity() {
                         is Result.Loading -> {
                             showLoading(true)
                         }
+
                         is Result.Error -> {
                             showLoading(false)
                             val errorMessage = result.data
@@ -191,6 +196,7 @@ class RegisterActivity : AppCompatActivity() {
                                 errorMessage
                             ) { }
                         }
+
                         is Result.Success -> {
                             showLoading(false)
                             val idValue = result.data.data.id

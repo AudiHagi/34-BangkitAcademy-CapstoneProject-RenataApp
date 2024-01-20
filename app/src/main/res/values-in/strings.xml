@@ -29,7 +29,7 @@
     <string name="grow_button">Cara Menanam</string>
     <!-- ERROR TEXT -->
     <string name="error_email">Format email salah</string>
-    <string name="error_password">Password anda setidaknya terdiri dari 8 karakter dan menyertakan angka, huruf besar dan kecil, dan setidaknya satu simbol</string>
+    <string name="error_password">Password anda setidaknya terdiri dari 8 karakter</string>
     <string name="error_confirm_password">"Password harus sama </string>
     <!-- TOOLBAR TEXT -->
     <string name="account_toolbar">Akun</string>
@@ -103,7 +103,7 @@
     <string name="reset_to_login">Selamat! Kata sandi anda berhasil diganti. Silakan Masuk untuk memulai</string>
     <string name="reset_fail">Oops, Ganti kata sandi gagal</string>
     <string name="reset_fail_cause3">Kata sandi dan konfirmasi kata sandi harus sama</string>
-    <string name="reset_fail_cause2">Password anda setidaknya terdiri dari 8 karakter dan menyertakan angka, huruf besar dan kecil, dan setidaknya satu simbol</string>
+    <string name="reset_fail_cause2">Password anda setidaknya terdiri dari 8 karakter</string>
     <string name="reset_fail_cause1">Kata sandi dan konfirmasi kata sandi tidak boleh kosong</string>
     <string name="title_activity_navigation">NavigationActivity</string>
     <string name="send_otp_fail">Tidak bisa mengirim OTP</string>

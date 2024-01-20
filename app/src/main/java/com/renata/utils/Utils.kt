@@ -10,9 +10,13 @@ import android.net.Uri
 import android.os.Environment
 import android.text.TextUtils
 import android.util.Patterns
-import java.io.*
+import java.io.ByteArrayOutputStream
+import java.io.File
+import java.io.FileOutputStream
+import java.io.InputStream
+import java.io.OutputStream
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
 import java.util.regex.Pattern
 
 private const val FILENAME_FORMAT = "dd-MMM-yyyy"
@@ -57,10 +61,7 @@ fun passwordValidation(password: String): Boolean {
     if (!Pattern.compile("[0-9]").matcher(password).find()) {
         return false
     }
-    if (!Pattern.compile("[^a-zA-Z0-9]").matcher(password).find()) {
-        return false
-    }
-    return true
+    return Pattern.compile("[^a-zA-Z0-9]").matcher(password).find()
 }
 
 

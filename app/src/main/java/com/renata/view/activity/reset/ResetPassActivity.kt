@@ -103,14 +103,17 @@ class ResetPassActivity : AppCompatActivity() {
                 insertPass()
                 insertConfirmPAss()
             }
+
             confirmPass.isEmpty() -> {
                 showLoading(false)
                 insertConfirmPAss()
             }
+
             password.isEmpty() -> {
                 showLoading(false)
                 insertPass()
             }
+
             else -> {
                 if (!TextUtils.isEmpty(password) && !TextUtils.isEmpty(confirmPass)
                 ) {
@@ -151,6 +154,7 @@ class ResetPassActivity : AppCompatActivity() {
                         is Result.Loading -> {
                             showLoading(true)
                         }
+
                         is Result.Error -> {
                             showLoading(false)
                             showAlert(
@@ -158,6 +162,7 @@ class ResetPassActivity : AppCompatActivity() {
                                 getString(R.string.reset_fail_cause3)
                             ) {}
                         }
+
                         is Result.Success -> {
                             showLoading(false)
                             showAlert(

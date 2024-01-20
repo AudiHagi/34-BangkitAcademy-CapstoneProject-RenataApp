@@ -25,8 +25,8 @@ data class DataPlant(
     val id: String,
 
     @field:SerializedName("soil_id")
-    val soil_id: String,
+    val soilId: String,
 
     @field:SerializedName("name")
-    val plant_name: String
+    val plantName: String
 ) : Parcelable

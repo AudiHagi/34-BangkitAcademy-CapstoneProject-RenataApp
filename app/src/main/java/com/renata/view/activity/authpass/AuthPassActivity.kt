@@ -104,6 +104,7 @@ class AuthPassActivity : AppCompatActivity() {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                         showAlert(
@@ -111,6 +112,7 @@ class AuthPassActivity : AppCompatActivity() {
                             getString(R.string.send_otp_fail_cause2)
                         ) { otpClear() }
                     }
+
                     is Result.Success -> {
                         showLoading(false)
                         showAlert(
@@ -131,6 +133,7 @@ class AuthPassActivity : AppCompatActivity() {
                         is Result.Loading -> {
                             showLoading(true)
                         }
+
                         is Result.Error -> {
                             showLoading(false)
                             val errorMessage = result.data
@@ -139,6 +142,7 @@ class AuthPassActivity : AppCompatActivity() {
                                 errorMessage
                             ) { otpClear() }
                         }
+
                         is Result.Success -> {
                             showLoading(false)
                             showAlert(

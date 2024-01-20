@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.renata.databinding.HistoryLayoutBinding
 import com.renata.utils.DateFormatter
-import java.util.*
+import java.util.TimeZone
 
 class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() {
     private var scanHistories: List<ScanHistory> = listOf()
@@ -39,7 +39,7 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() 
     inner class HistoryViewHolder(private val binding: HistoryLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(scanHistory: ScanHistory) {
-            binding.tvSoilName.text = scanHistory.soil_Type
+            binding.tvSoilName.text = scanHistory.soilType
             binding.tvScanDate.text =
                 DateFormatter.formatDate(scanHistory.date, TimeZone.getDefault().id)
             Glide.with(itemView)

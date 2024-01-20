@@ -60,10 +60,12 @@ class HistoryFragment : Fragment() {
                         }
                     }
                 }
+
                 is Result.Error -> {
                     historyBinding.layoutLoading.visibility = View.VISIBLE
                     historyBinding.noHistory.text = getString(R.string.fail_show_history)
                 }
+
                 is Result.Loading -> {
                     historyBinding.layoutLoading.visibility = View.VISIBLE
                 }
@@ -71,7 +73,7 @@ class HistoryFragment : Fragment() {
         }
         adapter.setOnItemClickCallback(object : HistoryAdapter.OnItemClickCallback {
             override fun onItemClicked(data: ScanHistory) {
-                val scanId = data.scan_id
+                val scanId = data.scanId
                 historyViewModel.detailHistory(token, scanId)
                     .observe(viewLifecycleOwner) { result ->
                         when (result) {
@@ -95,7 +97,7 @@ class HistoryFragment : Fragment() {
                                     )
                                     it.putExtra(
                                         DetailHistoryActivity.SOIL_NAME,
-                                        detailHistory.soil_Type
+                                        detailHistory.soilType
                                     )
                                     it.putExtra(
                                         DetailHistoryActivity.PLANT_RECOMM,
@@ -109,8 +111,10 @@ class HistoryFragment : Fragment() {
                                     )
                                 }
                             }
+
                             is Result.Error -> {
                             }
+
                             is Result.Loading -> {
                             }
                         }

@@ -21,13 +21,13 @@ data class DataProfile(
     val email: String,
 
     @field:SerializedName("full_name")
-    val full_name: String,
+    val fullName: String,
 
     @field:SerializedName("first_name")
-    val first_name: String,
+    val firstName: String,
 
     @field:SerializedName("last_name")
-    val last_name: String,
+    val lastName: String,
 
     @field:SerializedName("phone")
     val phone: String,
@@ -36,7 +36,7 @@ data class DataProfile(
     val address: String,
 
     @field:SerializedName("avatar_link")
-    val avatar_link: String
+    val avatarLink: String
 )
 
 
