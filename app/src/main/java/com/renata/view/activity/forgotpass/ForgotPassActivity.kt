@@ -36,7 +36,7 @@ class ForgotPassActivity : AppCompatActivity() {
         setupView()
         setupAnimation()
         emailET()
-        forgotPassBinding.sendOTPButton.setOnClickListener { sendOtp() }
+        forgotPassBinding.sendOtpButton.setOnClickListener { sendOtp() }
     }
 
     private fun obtainViewModel(activity: AppCompatActivity): ForgotPassViewModel {
@@ -177,7 +177,7 @@ class ForgotPassActivity : AppCompatActivity() {
             ObjectAnimator.ofFloat(forgotPassBinding.emailEditTextLayout, View.ALPHA, 1f)
                 .setDuration(500)
         val sendOTP =
-            ObjectAnimator.ofFloat(forgotPassBinding.sendOTPButton, View.ALPHA, 1f).setDuration(500)
+            ObjectAnimator.ofFloat(forgotPassBinding.sendOtpButton, View.ALPHA, 1f).setDuration(500)
 
         AnimatorSet().apply {
             playSequentially(

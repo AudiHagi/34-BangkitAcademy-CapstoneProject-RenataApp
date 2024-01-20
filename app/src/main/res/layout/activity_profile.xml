@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/backButton"
+            android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/cd_profile"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/update_profile_toolbar"
+            android:text="@string/text_update_profile_toolbar"
             android:textColor="?attr/colorPrimary"
             android:textSize="@dimen/text_size_toolbar"
             android:textStyle="bold" />
@@ -51,14 +51,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/changeAvatarButton"
+            android:id="@+id/change_avatar_button"
             android:layout_width="0dp"
             android:layout_height="64dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:contentDescription="@string/change_avatar_button"
+            android:contentDescription="@string/cd_change_avatar_button"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/change_avatar_button"
+            android:text="@string/cd_change_avatar_button"
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/profile_image"
@@ -71,13 +71,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/first_name_title"
+            android:text="@string/text_first_name_title"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/profile_image"
             app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fNameEditTextLayout"
+            android:id="@+id/first_name_edit_text_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -101,20 +101,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/phone_title"
+            android:text="@string/text_phone_title"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/profile_image"
-            app:layout_constraintTop_toBottomOf="@+id/lNameEditTextLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/last_name_edit_text_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phoneEditTextLayout"
+            android:id="@+id/phone_edit_text_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_profile_phone_title"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/fNameEditTextLayout"
+            app:layout_constraintStart_toStartOf="@+id/first_name_edit_text_layout"
             app:layout_constraintTop_toTopOf="@+id/tv_profile_phone_title">
 
             <com.renata.customview.MyNameEditText
@@ -131,20 +131,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/address_title"
+            android:text="@string/text_address_title"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/profile_image"
-            app:layout_constraintTop_toBottomOf="@+id/phoneEditTextLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/phone_edit_text_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/addressEditTextLayout"
+            android:id="@+id/address_edit_text_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_profile_address_title"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/lNameEditTextLayout"
+            app:layout_constraintStart_toStartOf="@+id/last_name_edit_text_layout"
             app:layout_constraintTop_toTopOf="@+id/tv_profile_address_title">
 
             <com.renata.customview.MyNameEditText
@@ -161,20 +161,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/last_name_title"
+            android:text="@string/text_last_name_title"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/profile_image"
-            app:layout_constraintTop_toBottomOf="@+id/fNameEditTextLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/first_name_edit_text_layout" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lNameEditTextLayout"
+            android:id="@+id/last_name_edit_text_layout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_profile_lastname_title"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/fNameEditTextLayout"
+            app:layout_constraintStart_toStartOf="@+id/first_name_edit_text_layout"
             app:layout_constraintTop_toTopOf="@+id/tv_profile_lastname_title">
 
             <com.renata.customview.MyNameEditText
@@ -186,23 +186,23 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/saveButton"
+            android:id="@+id/save_button"
             android:layout_width="0dp"
             android:layout_height="64dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="32dp"
-            android:contentDescription="@string/save_changes_button"
+            android:contentDescription="@string/cd_save_changes_button"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/save_changes_button"
+            android:text="@string/cd_save_changes_button"
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/addressEditTextLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/address_edit_text_layout" />
 
         <ProgressBar
-            android:id="@+id/progressBar3"
+            android:id="@+id/progress_bar_3"
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -126,7 +126,7 @@ class ScanActivity : AppCompatActivity() {
             detectedClass.toRequestBody("text/plain".toMediaTypeOrNull())
         val builder = AlertDialog.Builder(this, com.renata.R.style.CustomAlertDialog).create()
         val view = layoutInflater.inflate(com.renata.R.layout.custom_alert_dialog_success, null)
-        val button = view.findViewById<Button>(com.renata.R.id.dialogDismiss_button)
+        val button = view.findViewById<Button>(com.renata.R.id.dialog_dismiss_button)
         builder.setView(view)
         button.setOnClickListener {
             builder.dismiss()
@@ -189,7 +189,7 @@ class ScanActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this, com.renata.R.style.CustomAlertDialog)
             .create()
         val view = layoutInflater.inflate(com.renata.R.layout.custom_alert_dialog_crop_fail, null)
-        val button = view.findViewById<Button>(com.renata.R.id.tryAgain_btn)
+        val button = view.findViewById<Button>(com.renata.R.id.try_again_button)
         builder.setView(view)
         button.setOnClickListener { builder.dismiss() }
         builder.setCanceledOnTouchOutside(false)
@@ -200,7 +200,7 @@ class ScanActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this, com.renata.R.style.CustomAlertDialog)
             .create()
         val view = layoutInflater.inflate(com.renata.R.layout.custom_alert_dialog_fail, null)
-        val button = view.findViewById<Button>(com.renata.R.id.dialogFailDismiss_button)
+        val button = view.findViewById<Button>(com.renata.R.id.dialog_fail_dismiss_button)
         builder.setView(view)
         button.setOnClickListener { builder.dismiss() }
         builder.setCanceledOnTouchOutside(false)
@@ -211,7 +211,7 @@ class ScanActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this, com.renata.R.style.CustomAlertDialog)
             .create()
         val view = layoutInflater.inflate(com.renata.R.layout.custom_alert_dialog_image_null, null)
-        val button = view.findViewById<Button>(com.renata.R.id.dialogTry_button)
+        val button = view.findViewById<Button>(com.renata.R.id.dialog_try_button)
         builder.setView(view)
         button.setOnClickListener { builder.dismiss() }
         builder.setCanceledOnTouchOutside(false)

@@ -7,7 +7,7 @@
     tools:context=".view.activity.authentication.AuthenticationActivity">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:elevation="10dp"
@@ -28,12 +28,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/titleTextView"
+            android:id="@+id/title_text_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:alpha="0"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/otp_verification_page"
+            android:text="@string/text_otp_verification_page"
             android:textAlignment="center"
             android:textColor="?attr/colorPrimary"
             android:textSize="@dimen/text_size_authtitle"
@@ -42,25 +42,25 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/titleTextView2"
+            android:id="@+id/title_text_view_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:alpha="0"
-            android:text="@string/otp_sent"
+            android:text="@string/text_otp_sent"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
 
         <TextView
-            android:id="@+id/titleTextView3"
+            android:id="@+id/title_text_view_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:alpha="0"
-            android:text="@string/otp_req"
+            android:text="@string/text_otp_req"
             android:textAlignment="center"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +77,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView2" />
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view_2" />
 
         <EditText
             android:id="@+id/auth_otp_1"
@@ -92,7 +92,7 @@
             android:padding="20dp"
             app:layout_constraintEnd_toStartOf="@id/auth_otp_2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView3"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view_3"
             tools:ignore="Autofill,LabelFor" />
 
         <EditText
@@ -108,7 +108,7 @@
             android:padding="20dp"
             app:layout_constraintEnd_toStartOf="@id/auth_otp_3"
             app:layout_constraintStart_toEndOf="@id/auth_otp_1"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView3"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view_3"
             tools:ignore="Autofill,LabelFor" />
 
         <EditText
@@ -124,7 +124,7 @@
             android:padding="20dp"
             app:layout_constraintEnd_toStartOf="@id/auth_otp_4"
             app:layout_constraintStart_toEndOf="@id/auth_otp_2"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView3"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view_3"
             tools:ignore="Autofill,LabelFor" />
 
         <EditText
@@ -140,7 +140,7 @@
             android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/auth_otp_3"
-            app:layout_constraintTop_toBottomOf="@+id/titleTextView3"
+            app:layout_constraintTop_toBottomOf="@+id/title_text_view_3"
             tools:ignore="Autofill,LabelFor" />
 
         <Button
@@ -151,9 +151,9 @@
             android:layout_marginTop="80dp"
             android:layout_marginEnd="32dp"
             android:alpha="0"
-            android:contentDescription="@string/verify_button"
+            android:contentDescription="@string/cd_verify_button"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/verify_button"
+            android:text="@string/cd_verify_button"
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -161,7 +161,7 @@
             app:layout_constraintTop_toBottomOf="@+id/auth_otp_1" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/notReceiveOTP"
+            android:id="@+id/not_receive_otp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -171,19 +171,19 @@
             app:layout_constraintTop_toBottomOf="@+id/verifyButton">
 
             <TextView
-                android:id="@+id/didntReceive"
+                android:id="@+id/didnt_receive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/want_resend"
+                android:text="@string/text_want_resend"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/resendOTP"
+                android:id="@+id/text_resend_otp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
-                android:text="@string/resend_otp"
+                android:text="@string/text_resend_otp"
                 android:textAlignment="center"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="16sp"
@@ -198,7 +198,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/copyright"
+        android:text="@string/text_copyright"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

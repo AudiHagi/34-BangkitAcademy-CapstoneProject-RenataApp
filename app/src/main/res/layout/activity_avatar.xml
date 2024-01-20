@@ -7,7 +7,7 @@
     tools:context=".view.activity.setavatar.AvatarActivity">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:elevation="10dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/backButton"
+            android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/cd_back"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/change_avatar_toolbar"
+            android:text="@string/text_change_avatar_toolbar"
             android:textColor="?attr/colorPrimary"
             android:textSize="@dimen/text_size_toolbar"
             android:textStyle="bold" />
@@ -60,7 +60,7 @@
             app:layout_constraintGuide_begin="30dp" />
 
         <ImageView
-            android:id="@+id/previewImageView"
+            android:id="@+id/preview_image_view"
             android:layout_width="0dp"
             android:layout_height="350dp"
             android:layout_marginStart="8dp"
@@ -73,50 +73,50 @@
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/cameraButton"
+            android:id="@+id/camera_button"
             android:layout_width="150dp"
             android:layout_height="64dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="16dp"
-            android:contentDescription="@string/camera_button"
+            android:contentDescription="@string/cd_camera_button"
             android:elevation="2dp"
             android:fontFamily="@font/rajdhani700"
             android:scaleType="fitCenter"
-            android:text="@string/camera_button"
+            android:text="@string/cd_camera_button"
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/previewImageView" />
+            app:layout_constraintTop_toBottomOf="@+id/preview_image_view" />
 
         <Button
-            android:id="@+id/galleryButton"
+            android:id="@+id/gallery_button"
             android:layout_width="150dp"
             android:layout_height="64dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
-            android:contentDescription="@string/gallery_button"
+            android:contentDescription="@string/cd_gallery_button"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/gallery_button"
+            android:text="@string/cd_gallery_button"
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/previewImageView" />
+            app:layout_constraintTop_toBottomOf="@+id/preview_image_view" />
 
         <Button
-            android:id="@+id/changeButton"
+            android:id="@+id/change_button"
             android:layout_width="0dp"
             android:layout_height="64dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="16dp"
-            android:contentDescription="@string/change_button"
+            android:contentDescription="@string/cd_change_button"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/change_button"
+            android:text="@string/cd_change_button"
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cameraButton" />
+            app:layout_constraintTop_toBottomOf="@+id/camera_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

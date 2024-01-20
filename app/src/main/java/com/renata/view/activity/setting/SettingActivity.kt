@@ -31,8 +31,8 @@ class SettingActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.onNotifButton -> alarmReceiver.setRepeatingAlarm(this)
-            R.id.offNotifButton -> alarmReceiver.cancelAlarm(this)
+            R.id.on_notif_button -> alarmReceiver.setRepeatingAlarm(this)
+            R.id.off_notif_button -> alarmReceiver.cancelAlarm(this)
         }
     }
 }

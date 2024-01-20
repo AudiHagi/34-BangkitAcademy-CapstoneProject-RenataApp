@@ -91,7 +91,7 @@ class AuthenticationActivity : AppCompatActivity() {
                 })
             }
         }
-        authenticationBinding.resendOTP.setOnClickListener {
+        authenticationBinding.textResendOtp.setOnClickListener {
             resendOtp(id)
         }
         authenticationBinding.verifyButton.setOnClickListener {
@@ -208,7 +208,7 @@ class AuthenticationActivity : AppCompatActivity() {
             ObjectAnimator.ofFloat(authenticationBinding.verifyButton, View.ALPHA, 1f)
                 .setDuration(500)
         val didnReceive =
-            ObjectAnimator.ofFloat(authenticationBinding.notReceiveOTP, View.ALPHA, 1f)
+            ObjectAnimator.ofFloat(authenticationBinding.didntReceive, View.ALPHA, 1f)
                 .setDuration(500)
 
         AnimatorSet().apply {

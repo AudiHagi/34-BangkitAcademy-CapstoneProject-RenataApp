@@ -7,7 +7,7 @@
     tools:context=".view.activity.forgotpass.ForgotPassActivity">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:elevation="10dp"
@@ -20,13 +20,13 @@
         app:lottie_rawRes="@raw/loading" />
 
     <TextView
-        android:id="@+id/titleTextView"
+        android:id="@+id/title_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:alpha="0"
         android:fontFamily="@font/rajdhani700"
-        android:text="@string/forgot_pass_page"
+        android:text="@string/text_forgot_pass_page"
         android:textAlignment="center"
         android:textColor="?attr/colorPrimary"
         android:textSize="@dimen/text_size_authtitle"
@@ -36,30 +36,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titleTextView2"
+        android:id="@+id/title_text_view_2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:alpha="0"
-        android:text="@string/forgot_pass_req"
+        android:text="@string/text_forgot_pass_req"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/errorEmail"
+        app:layout_constraintBottom_toTopOf="@+id/error_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
 
     <TextView
-        android:id="@+id/errorEmail"
+        android:id="@+id/error_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textColor="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/emailEditTextLayout"
-        app:layout_constraintStart_toStartOf="@id/emailEditTextLayout" />
+        app:layout_constraintBottom_toTopOf="@+id/email_edit_text_layout"
+        app:layout_constraintStart_toStartOf="@id/email_edit_text_layout" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailEditTextLayout"
+        android:id="@+id/email_edit_text_layout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/errorEmail">
+        app:layout_constraintTop_toBottomOf="@+id/error_email">
 
         <com.renata.customview.MyEmailEditText
             android:id="@+id/ed_email_forgot"
@@ -82,21 +82,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/sendOTPButton"
+        android:id="@+id/send_otp_button"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="32dp"
         android:alpha="0"
-        android:contentDescription="@string/send_otp_button"
+        android:contentDescription="@string/cd_send_otp_button"
         android:fontFamily="@font/rajdhani700"
-        android:text="@string/send_otp_button"
+        android:text="@string/cd_send_otp_button"
         android:textAllCaps="false"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/email_edit_text_layout" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -104,7 +104,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/copyright"
+        android:text="@string/text_copyright"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

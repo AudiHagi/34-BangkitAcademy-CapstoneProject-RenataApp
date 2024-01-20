@@ -9,24 +9,20 @@
         android:id="@+id/navigation_history"
         android:name="com.renata.view.fragment.history.HistoryFragment"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" >
-    </fragment>
+        tools:layout="@layout/fragment_history"></fragment>
     <fragment
         android:id="@+id/navigation_account"
         android:name="com.renata.view.fragment.account.AccountFragment"
         android:label="fragment_account"
-        tools:layout="@layout/fragment_account" >
-    </fragment>
+        tools:layout="@layout/fragment_account"></fragment>
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.renata.view.fragment.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
-    </fragment>
+        tools:layout="@layout/fragment_profile"></fragment>
     <fragment
         android:id="@+id/navigation_setting"
         android:name="com.renata.view.fragment.setting.SettingFragment"
         android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" >
-    </fragment>
+        tools:layout="@layout/fragment_setting"></fragment>
 </navigation>

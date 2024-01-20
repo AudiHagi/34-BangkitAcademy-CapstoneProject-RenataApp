@@ -7,7 +7,7 @@
     tools:context=".view.activity.register.RegisterActivity">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:elevation="10dp"
@@ -36,58 +36,58 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/titleTextView"
+                android:id="@+id/title_text_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="8dp"
                 android:alpha="0"
                 android:fontFamily="@font/rajdhani700"
-                android:text="@string/register_page"
+                android:text="@string/text_register_page"
                 android:textAlignment="center"
                 android:textColor="@color/green1"
                 android:textSize="@dimen/text_size_authtitle"
-                app:layout_constraintBottom_toTopOf="@+id/titleTextView2"
+                app:layout_constraintBottom_toTopOf="@+id/title_text_view_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/titleTextView2"
+                android:id="@+id/title_text_view_2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:alpha="0"
-                android:text="@string/register_req"
+                android:text="@string/text_register_req"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
 
             <TextView
-                android:id="@+id/emailTextView"
+                android:id="@+id/email_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="10dp"
                 android:alpha="0"
-                android:text="@string/email"
+                android:text="@string/text_email"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titleTextView2" />
+                app:layout_constraintTop_toBottomOf="@+id/title_text_view_2" />
 
             <TextView
-                android:id="@+id/errorEmail"
+                android:id="@+id/error_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
                 android:textAlignment="center"
                 android:textColor="@color/red"
-                app:layout_constraintBottom_toTopOf="@+id/emailEditTextLayout"
-                app:layout_constraintStart_toStartOf="@+id/emailTextView"
-                app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
+                app:layout_constraintBottom_toTopOf="@+id/email_edit_text_layout"
+                app:layout_constraintStart_toStartOf="@+id/email_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/email_text_view" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/emailEditTextLayout"
+                android:id="@+id/email_edit_text_layout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                 android:alpha="0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/errorEmail">
+                app:layout_constraintTop_toBottomOf="@+id/error_email">
 
                 <com.renata.customview.MyEmailEditText
                     android:id="@+id/ed_register_email"
@@ -109,28 +109,28 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/passwordTextView"
+                android:id="@+id/password_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:alpha="0"
-                android:text="@string/password"
+                android:text="@string/text_password"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/email_edit_text_layout" />
 
             <TextView
-                android:id="@+id/errorPass"
+                android:id="@+id/error_pass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
                 android:textAlignment="center"
                 android:textColor="@color/red"
-                app:layout_constraintStart_toStartOf="@+id/passwordTextView"
-                app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />
+                app:layout_constraintStart_toStartOf="@+id/password_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/password_text_view" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordEditTextLayout"
+                android:id="@+id/password_edit_text_layout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -139,7 +139,7 @@
                 android:alpha="0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/errorPass"
+                app:layout_constraintTop_toBottomOf="@+id/error_pass"
                 app:passwordToggleEnabled="true">
 
                 <com.renata.customview.MyPasswordEditText
@@ -153,28 +153,28 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/confirmPasswordTextView"
+                android:id="@+id/confirm_password_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="8dp"
                 android:alpha="0"
-                android:text="@string/confirm_password"
+                android:text="@string/text_confirm_password"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/password_edit_text_layout" />
 
             <TextView
-                android:id="@+id/errorConfirmPass"
+                android:id="@+id/error_confirm_pass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
                 android:textAlignment="center"
                 android:textColor="@color/red"
-                app:layout_constraintStart_toStartOf="@+id/passwordTextView"
-                app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTextView" />
+                app:layout_constraintStart_toStartOf="@+id/password_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/confirm_password_text_view" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/confirmPasswordEditTextLayout"
+                android:id="@+id/confirm_password_edit_text_layout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -183,7 +183,7 @@
                 android:alpha="0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/errorConfirmPass"
+                app:layout_constraintTop_toBottomOf="@+id/error_confirm_pass"
                 app:passwordToggleEnabled="true">
 
                 <com.renata.customview.MyPasswordEditText
@@ -197,46 +197,46 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/registerButton"
+                android:id="@+id/register_button"
                 android:layout_width="0dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="32dp"
                 android:alpha="0"
-                android:contentDescription="@string/register_button"
+                android:contentDescription="@string/cd_register_button"
                 android:fontFamily="@font/rajdhani700"
-                android:text="@string/register_button"
+                android:text="@string/cd_register_button"
                 android:textAllCaps="false"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/confirmPasswordEditTextLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/confirm_password_edit_text_layout" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/goToLogin"
+                android:id="@+id/go_to_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:alpha="0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registerButton">
+                app:layout_constraintTop_toBottomOf="@+id/register_button">
 
                 <TextView
-                    android:id="@+id/loginTextView"
+                    android:id="@+id/login_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/want_login"
+                    android:text="@string/text_want_login"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/loginAccount"
+                    android:id="@+id/login_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
-                    android:text="@string/login_intent"
+                    android:text="@string/text_login_intent"
                     android:textAlignment="center"
                     android:textColor="?attr/colorPrimary"
                     android:textSize="16sp"
@@ -244,16 +244,16 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/copyright"
+                android:text="@string/text_copyright"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/goToLogin" />
+                app:layout_constraintTop_toBottomOf="@+id/go_to_login" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

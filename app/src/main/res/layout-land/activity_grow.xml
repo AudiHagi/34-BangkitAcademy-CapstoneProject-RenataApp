@@ -7,7 +7,7 @@
     tools:context=".view.activity.grow.GrowActivity">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/progressBar"
+        android:id="@+id/progress_bar"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:elevation="10dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/backButton"
+            android:id="@+id/back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/cd_back"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/rajdhani700"
-            android:text="@string/how_to_grow_toolbar"
+            android:text="@string/text_how_to_grow_toolbar"
             android:textColor="?attr/colorPrimary"
             android:textSize="@dimen/text_size_toolbar"
             android:textStyle="bold" />
@@ -71,7 +71,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:text="@string/soil_type_title"
+                android:text="@string/text_soil_type_title"
                 android:textAlignment="center"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="@dimen/text_size_medium"
@@ -91,13 +91,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/title1" />
 
             <TextView
-                android:id="@+id/soilTypeGrow"
+                android:id="@+id/soil_type_grow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:text="@string/soil_placeholder"
+                android:text="@string/text_soil_placeholder"
                 android:textAlignment="center"
                 android:textColor="@color/brown"
                 android:textSize="@dimen/text_size_medium"
@@ -111,14 +111,14 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:text="@string/plant_recommendations_title"
+                android:text="@string/text_plant_recommendations_title"
                 android:textAlignment="center"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="@dimen/text_size_medium"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/soilTypeGrow" />
+                app:layout_constraintTop_toBottomOf="@+id/soil_type_grow" />
 
             <View
                 android:id="@+id/barrier2"
@@ -132,7 +132,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/title2" />
 
             <TextView
-                android:id="@+id/recomCropGrow"
+                android:id="@+id/recom_crop_grow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -140,7 +140,7 @@
                 android:layout_marginEnd="20dp"
                 android:ellipsize="none"
                 android:maxLines="10"
-                android:text="@string/plant_placeholder"
+                android:text="@string/text_plant_placeholder"
                 android:textColor="@color/brown"
                 android:textSize="@dimen/text_size_medium"
                 android:textStyle="bold"
@@ -155,7 +155,7 @@
                 android:layout_marginEnd="20dp"
                 android:background="?attr/colorPrimary"
                 android:backgroundTint="?attr/colorPrimary"
-                app:layout_constraintTop_toBottomOf="@+id/recomCropGrow" />
+                app:layout_constraintTop_toBottomOf="@+id/recom_crop_grow" />
 
             <TextView
                 android:id="@+id/insert_plant_title"
@@ -165,27 +165,27 @@
                 android:layout_marginEnd="20dp"
                 android:ellipsize="none"
                 android:maxLines="10"
-                android:text="@string/insert_your_plant_name_title"
+                android:text="@string/text_insert_your_plant_name_title"
                 android:textAlignment="center"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="@dimen/text_size_medium"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/errorPlant"
-                app:layout_constraintEnd_toEndOf="@+id/recomCropGrow"
-                app:layout_constraintStart_toStartOf="@+id/recomCropGrow" />
+                app:layout_constraintBottom_toTopOf="@+id/error_plant"
+                app:layout_constraintEnd_toEndOf="@+id/recom_crop_grow"
+                app:layout_constraintStart_toStartOf="@+id/recom_crop_grow" />
 
             <TextView
-                android:id="@+id/errorPlant"
+                android:id="@+id/error_plant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
                 android:textAlignment="center"
                 android:textColor="@color/red"
-                app:layout_constraintBottom_toTopOf="@+id/plantEditTextLayout"
+                app:layout_constraintBottom_toTopOf="@+id/plant_edit_text_layout"
                 app:layout_constraintStart_toStartOf="@+id/insert_plant_title" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/plantEditTextLayout"
+                android:id="@+id/plant_edit_text_layout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -206,21 +206,21 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/growButton"
+                android:id="@+id/grow_button"
                 android:layout_width="0dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="@string/grow_button"
+                android:contentDescription="@string/cd_grow_button"
                 android:fontFamily="@font/rajdhani700"
-                android:text="@string/grow_button"
+                android:text="@string/cd_grow_button"
                 android:textAllCaps="false"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/plantEditTextLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/plant_edit_text_layout" />
 
             <View
                 android:id="@+id/barrier4"
@@ -231,7 +231,7 @@
                 android:layout_marginEnd="20dp"
                 android:background="?attr/colorPrimary"
                 android:backgroundTint="?attr/colorPrimary"
-                app:layout_constraintTop_toBottomOf="@+id/growButton" />
+                app:layout_constraintTop_toBottomOf="@+id/grow_button" />
 
             <TextView
                 android:id="@+id/growing_step"

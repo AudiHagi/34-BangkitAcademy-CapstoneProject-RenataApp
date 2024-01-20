@@ -8,8 +8,8 @@
 
     <item
         android:id="@+id/navigation_scan"
-        android:title=""
-        android:enabled="false"/>
+        android:enabled="false"
+        android:title="" />
 
     <item
         android:id="@+id/navigation_account"

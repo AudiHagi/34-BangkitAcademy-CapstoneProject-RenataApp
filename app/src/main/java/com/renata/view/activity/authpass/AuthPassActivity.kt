@@ -89,7 +89,7 @@ class AuthPassActivity : AppCompatActivity() {
                 })
             }
         }
-        authPassBinding.resendOTP.setOnClickListener {
+        authPassBinding.textResendOtp.setOnClickListener {
             resendOtpReset(email)
         }
         authPassBinding.verifyResetButton.setOnClickListener {
@@ -213,7 +213,7 @@ class AuthPassActivity : AppCompatActivity() {
             ObjectAnimator.ofFloat(authPassBinding.verifyResetButton, View.ALPHA, 1f)
                 .setDuration(500)
         val didnReceive =
-            ObjectAnimator.ofFloat(authPassBinding.notReceiveOTP, View.ALPHA, 1f)
+            ObjectAnimator.ofFloat(authPassBinding.didntReceive, View.ALPHA, 1f)
                 .setDuration(500)
 
         AnimatorSet().apply {
