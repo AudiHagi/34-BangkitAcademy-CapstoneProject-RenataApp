@@ -24,7 +24,7 @@ class AccountFragment : Fragment() {
     private var accountViewModel: ProfileViewModel = ProfileViewModel()
     private lateinit var loginPreference: LoginPreferences
     private lateinit var loginResult: LoginResult
-    private val PROFILE_ACTIVITY_REQUEST_CODE = 1
+    private val profileActivityRequestCode = 1
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -80,7 +80,7 @@ class AccountFragment : Fragment() {
         accountBinding.editProfile.setOnClickListener {
             val intent = Intent(requireContext(), ProfileActivity::class.java)
             intent.putExtra("token", token)
-            startActivityForResult(intent, PROFILE_ACTIVITY_REQUEST_CODE)
+            startActivityForResult(intent, profileActivityRequestCode)
             requireActivity().overridePendingTransition(
                 R.anim.slide_out_bottom,
                 R.anim.slide_in_bottom
@@ -92,7 +92,7 @@ class AccountFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         showLoading(false)
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == PROFILE_ACTIVITY_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+        if (requestCode == profileActivityRequestCode && resultCode == Activity.RESULT_OK) {
             val tes = loginResult.token
             val tokenNow = "Bearer $tes"
             accountViewModel.userProfile(tokenNow)

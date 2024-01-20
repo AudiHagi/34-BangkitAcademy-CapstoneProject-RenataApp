@@ -1,7 +1,10 @@
 package com.renata.data.plant.scanhistory
 
+import android.annotation.SuppressLint
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.renata.databinding.HistoryLayoutBinding
@@ -16,6 +19,7 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() 
         this.onItemClickCallback = onItemClickCallback
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateData(histories: List<ScanHistory>) {
         scanHistories = histories.sortedByDescending { it.date }
         notifyDataSetChanged()
@@ -38,6 +42,7 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() 
 
     inner class HistoryViewHolder(private val binding: HistoryLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        @RequiresApi(Build.VERSION_CODES.O)
         fun bind(scanHistory: ScanHistory) {
             binding.tvSoilName.text = scanHistory.soilType
             binding.tvScanDate.text =

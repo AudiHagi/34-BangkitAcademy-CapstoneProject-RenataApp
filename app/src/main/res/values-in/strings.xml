@@ -21,7 +21,6 @@
     <string name="text_notification_disabled_button">Matikan Notifikasi</string>
     <string name="text_change_language_button">Ganti Bahasa</string>
     <string name="cd_save_changes_button">Simpan</string>
-    <string name="dark_mode">Gelap</string>
     <string name="cd_confirm_password_button">Konfirmasi Password</string>
     <string name="cd_change_button">Unggah</string>
     <string name="text_try_again_button">Coba Lagi</string>
@@ -77,7 +76,6 @@
     <!-- MESSAGE -->
     <string name="insert_email">Masukkan Email Anda</string>
     <string name="insert_pass">Masukkan Kata Sandi Anda</string>
-    <string name="insert_name">Masukkan Nama Anda</string>
     <string name="login_fail">Gagal Masuk</string>
     <string name="login_fail_cause1">Email/Kata Sandi Tidak Valid</string>
     <string name="login_fail_cause2">Pastikan Email dan Password Sudah Benar</string>
@@ -90,8 +88,6 @@
     <string name="auth_success">Authentikasi berhasil</string>
     <string name="auth_to_login">Selamat! Akun anda telah berhasil dibuat. Silakan masuk untuk memulai</string>
     <string name="auth_to_reset">Sekarang ayo ganti kata sandi anda</string>
-    <string name="alarm_message">Sudahkah Anda memeriksa jenis tanah di sekitar Anda? Mari kita pindai sekarang</string>
-    <string name="permission_denied">Izin Akses Ditolak </string>
     <string name="resend_otp_req">Kirim Permintaan Kode Verifikasi</string>
     <string name="resend_otp_res">Kode Verifikasi telah dikirim lagi, silakan cek email anda</string>
     <string name="alarm_message1">Sudahkan anda memindai tanah di sekitar anda?</string>
@@ -114,10 +110,6 @@
     <string name="text_scan_success">Berhasil memindai</string>
     <string name="text_alert_no_image">Tidak ada gambar untuk dipindai</string>
     <string name="text_image_req">Silakan pilih gambar terlebih dahulu</string>
-    <string name="exPhone">Contoh : 085718620532</string>
-    <string name="exFirstName">Contoh : John</string>
-    <string name="exLastName">Contoh : Doe</string>
-    <string name="exAddress">Contoh : Cimahi, Jawa Barat</string>
     <string name="cd_back">Kembali</string>
     <string name="cd_previewImage">Placeholder Gambar Profile</string>
     <string name="text_date_title">Tanggal Scan</string>
@@ -130,7 +122,6 @@
     <string name="text_phone_title">Nomor HP</string>
     <string name="text_address_title">Alamat</string>
     <string name="scan_again_button">Pindai lagi</string>
-    <string name="treat_button">Perawatan</string>
     <string name="cd_plant_button">Tumbuhan</string>
     <string name="cd_change_profile">Ganti Profile</string>
     <string name="resend_otp_fail">Gagal mengirim ulang OTP</string>

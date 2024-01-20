@@ -37,7 +37,7 @@ import java.nio.ByteOrder
 
 class RenataRepository(private val application: Application) {
     private val apiService: ApiService = ApiConfig.getApiService()
-    private val TAG = "RenataRepository"
+    private val tag = "RenataRepository"
 
     fun classifyImage(image: Bitmap): String {
         try {
@@ -72,7 +72,7 @@ class RenataRepository(private val application: Application) {
             val maxPos =
                 outputFeature0.floatArray.indices.maxByOrNull { outputFeature0.floatArray[it] } ?: 0
             val detectedClass = classes[maxPos]
-            Log.d(TAG, "Image classification result: $detectedClass")
+            Log.d(tag, "Image classification result: $detectedClass")
             return detectedClass
         } catch (e: IOException) {
             throw Exception("Failed to classify image")
@@ -92,12 +92,12 @@ class RenataRepository(private val application: Application) {
                 confirmPass
             )
             if (response.success) {
-                Log.d(TAG, "Register success: ${response.message}")
+                Log.d(tag, "Register success: ${response.message}")
                 emit(Result.Success(response))
             } else {
                 val errorResponse = JSONObject(response.message)
                 val errorMessage = errorResponse.getString("message")
-                Log.d(TAG, "Register error: $errorMessage")
+                Log.d(tag, "Register error: $errorMessage")
                 emit(Result.Error(errorMessage))
             }
         } catch (e: Exception) {
@@ -112,7 +112,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Register exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -126,10 +126,10 @@ class RenataRepository(private val application: Application) {
             val requestBody = VerifyEmailRequest(id, otp)
             val response = apiService.verifyEmail(requestBody)
             if (response.success) {
-                Log.d(TAG, "Authentication success: ${response.message}")
+                Log.d(tag, "Authentication success: ${response.message}")
                 emit(Result.Success(response))
             } else {
-                Log.d(TAG, "Authentication error: ${response.message}")
+                Log.d(tag, "Authentication error: ${response.message}")
                 emit(Result.Error(response.message))
             }
         } catch (e: Exception) {
@@ -145,7 +145,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Authentication exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -155,10 +155,10 @@ class RenataRepository(private val application: Application) {
         try {
             val response = apiService.resendVerif(id)
             if (response.success) {
-                Log.d(TAG, "Resend OTP success: ${response.message}")
+                Log.d(tag, "Resend OTP success: ${response.message}")
                 emit(Result.Success(response))
             } else {
-                Log.d(TAG, "Resend OTP error: ${response.message}")
+                Log.d(tag, "Resend OTP error: ${response.message}")
                 emit(Result.Error(response.message))
             }
         } catch (e: Exception) {
@@ -173,7 +173,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Resend OTP exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -186,10 +186,10 @@ class RenataRepository(private val application: Application) {
         try {
             val response = apiService.login(email, password)
             if (response.success) {
-                Log.d(TAG, "Login success: ${response.message}")
+                Log.d(tag, "Login success: ${response.message}")
                 emit(Result.Success(response))
             } else {
-                Log.d(TAG, "Login error: ${response.message}")
+                Log.d(tag, "Login error: ${response.message}")
                 emit(Result.Error(response.message))
             }
         } catch (e: Exception) {
@@ -205,7 +205,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Login exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -219,10 +219,10 @@ class RenataRepository(private val application: Application) {
                 email
             )
             if (response.success) {
-                Log.d(TAG, "Forgot password success: ${response.message}")
+                Log.d(tag, "Forgot password success: ${response.message}")
                 emit(Result.Success(response))
             } else {
-                Log.d(TAG, "Forgot password error: ${response.message}")
+                Log.d(tag, "Forgot password error: ${response.message}")
                 emit(Result.Error(response.message))
             }
         } catch (e: Exception) {
@@ -237,7 +237,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Forgot password exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -251,10 +251,10 @@ class RenataRepository(private val application: Application) {
             val requestBody = VerifyResetPassRequest(email, otp)
             val response = apiService.verifResetPass(requestBody)
             if (response.success) {
-                Log.d(TAG, "Reset authentication success: ${response.message}")
+                Log.d(tag, "Reset authentication success: ${response.message}")
                 emit(Result.Success(response))
             } else {
-                Log.d(TAG, "Reset authentication error: ${response.message}")
+                Log.d(tag, "Reset authentication error: ${response.message}")
                 emit(Result.Error(response.message))
             }
         } catch (e: Exception) {
@@ -271,7 +271,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Reset authentication exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -289,10 +289,10 @@ class RenataRepository(private val application: Application) {
                 confirmPass
             )
             if (response.success) {
-                Log.d(TAG, "Reset password success: ${response.message}")
+                Log.d(tag, "Reset password success: ${response.message}")
                 emit(Result.Success(response))
             } else {
-                Log.d(TAG, "Reset password error: ${response.message}")
+                Log.d(tag, "Reset password error: ${response.message}")
                 emit(Result.Error(response.message))
             }
         } catch (e: Exception) {
@@ -309,7 +309,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Reset password exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -340,19 +340,19 @@ class RenataRepository(private val application: Application) {
                 val responseBody = res.body()
                 if (responseBody != null) {
                     if (responseBody.success) {
-                        Log.d(TAG, "Plant recommendation success: ${responseBody.message}")
+                        Log.d(tag, "Plant recommendation success: ${responseBody.message}")
                         emit(Result.Success(responseBody))
                     } else {
-                        Log.d(TAG, "Plant recommendation error: ${responseBody.message}")
+                        Log.d(tag, "Plant recommendation error: ${responseBody.message}")
                         emit(Result.Error(responseBody.message))
                     }
                 } else {
-                    Log.e(TAG, "Empty response body")
+                    Log.e(tag, "Empty response body")
                     emit(Result.Error("Empty response body"))
                 }
             } else {
                 val errorMessage = "HTTP error ${res.code()}: ${res.message()}"
-                Log.e(TAG, errorMessage)
+                Log.e(tag, errorMessage)
                 emit(Result.Error(errorMessage))
             }
         } catch (e: Exception) {
@@ -367,7 +367,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Plant recommendation exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -394,19 +394,19 @@ class RenataRepository(private val application: Application) {
                 val responseBody = res.body()
                 if (responseBody != null) {
                     if (responseBody.success) {
-                        Log.d(TAG, "Scan history success: ${responseBody.message}")
+                        Log.d(tag, "Scan history success: ${responseBody.message}")
                         emit(Result.Success(responseBody))
                     } else {
-                        Log.d(TAG, "Scan history error: ${responseBody.message}")
+                        Log.d(tag, "Scan history error: ${responseBody.message}")
                         emit(Result.Error(responseBody.message))
                     }
                 } else {
-                    Log.e(TAG, "Empty response body")
+                    Log.e(tag, "Empty response body")
                     emit(Result.Error("Empty response body"))
                 }
             } else {
                 val errorMessage = "HTTP error ${res.code()}: ${res.message()}"
-                Log.e(TAG, errorMessage)
+                Log.e(tag, errorMessage)
                 emit(Result.Error(errorMessage))
             }
         } catch (e: Exception) {
@@ -421,7 +421,7 @@ class RenataRepository(private val application: Application) {
 
                 else -> "Scan history exception: ${e.message}"
             }
-            Log.e(TAG, errorMessage)
+            Log.e(tag, errorMessage)
             emit(Result.Error(errorMessage))
         }
     }
@@ -449,19 +449,19 @@ class RenataRepository(private val application: Application) {
                     val responseBody = res.body()
                     if (responseBody != null) {
                         if (responseBody.success) {
-                            Log.d(TAG, "Detail history success: ${responseBody.message}")
+                            Log.d(tag, "Detail history success: ${responseBody.message}")
                             emit(Result.Success(responseBody))
                         } else {
-                            Log.d(TAG, "Detail history error: ${responseBody.message}")
+                            Log.d(tag, "Detail history error: ${responseBody.message}")
                             emit(Result.Error(responseBody.message))
                         }
                     } else {
-                        Log.e(TAG, "Empty response body")
+                        Log.e(tag, "Empty response body")
                         emit(Result.Error("Empty response body"))
                     }
                 } else {
                     val errorMessage = "HTTP error ${res.code()}: ${res.message()}"
-                    Log.e(TAG, errorMessage)
+                    Log.e(tag, errorMessage)
                     emit(Result.Error(errorMessage))
                 }
             } catch (e: Exception) {
@@ -477,7 +477,7 @@ class RenataRepository(private val application: Application) {
 
                     else -> "Detail history exception: ${e.message}"
                 }
-                Log.e(TAG, errorMessage)
+                Log.e(tag, errorMessage)
                 emit(Result.Error(errorMessage))
             }
         }

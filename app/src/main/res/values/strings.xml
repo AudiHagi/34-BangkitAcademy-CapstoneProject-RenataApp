@@ -20,7 +20,6 @@
     <string name="text_notification_disabled_button">Notification Disabled</string>
     <string name="text_change_language_button">Change Language</string>
     <string name="cd_save_changes_button">Save Changes</string>
-    <string name="dark_mode">Dark</string>
     <string name="cd_confirm_password_button">Confirm Password</string>
     <string name="cd_change_button">Change</string>
     <string name="text_try_again_button">Try Again</string>
@@ -76,7 +75,6 @@
     <!-- MESSAGE -->
     <string name="insert_email">Please insert your Email</string>
     <string name="insert_pass">Please insert your Password</string>
-    <string name="insert_name">Please insert your Name</string>
     <string name="login_fail">Login Failed</string>
     <string name="login_fail_cause1">Invalid Email/Password</string>
     <string name="login_fail_cause2">Make sure Email and Password are filled in correctly</string>
@@ -89,8 +87,6 @@
     <string name="auth_success">Authentication Success</string>
     <string name="auth_to_login">Congratulations! Your account has been successfully created. Please login to get started</string>
     <string name="auth_to_reset">Now let\'s reset the password</string>
-    <string name="alarm_message">Have you checked the type of soil around you? Let\'s scan it now</string>
-    <string name="permission_denied">Permission Denied</string>
     <string name="resend_otp_req">Resend OTP Request</string>
     <string name="resend_otp_res">The OTP has been sent again, please check your email</string>
     <string name="alarm_message1">Have you scanned the soil around you?</string>
@@ -113,10 +109,6 @@
     <string name="text_scan_success">Scan Success</string>
     <string name="text_alert_no_image">No Image Detected</string>
     <string name="text_image_req">Please Choose The Image First</string>
-    <string name="exPhone">ex : 085718620532</string>
-    <string name="exFirstName">ex : John</string>
-    <string name="exLastName">ex : Doe</string>
-    <string name="exAddress">ex : Cimahi, Jawa Barat</string>
     <string name="cd_back">Back</string>
     <string name="cd_previewImage">Profile Image Placeholder</string>
     <string name="text_date_title">Scan Date</string>
@@ -129,7 +121,6 @@
     <string name="text_phone_title">Phone</string>
     <string name="text_address_title">Address</string>
     <string name="scan_again_button">Scan Again</string>
-    <string name="treat_button">Treat</string>
     <string name="cd_plant_button">Plant</string>
     <string name="cd_change_profile">Change Profile</string>
     <string name="resend_otp_fail">Resend OTP Failed</string>
